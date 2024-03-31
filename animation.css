@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050210;
+}
+.cerc {
+    position: relative;
+    width: 60vh;
+    height: 60vh;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius:50%;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }    
+}
+.cerc:after {
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    bottom: 35px;
+    left: 35px;
+    border-radius: 50%;
+    background-color: #050210;
+}
+.cerc span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius:50%; 
+}
+.cerc span:nth-child(1){
+    filter: blur(5px);
+}
+.cerc span:nth-child(2){
+    filter: blur(10);
+}
+.cerc span:nth-child(3){
+    filter: blur(20);
+}
+.cerc span:nth-child(4){
+    filter: blur(55px);
+}
+
